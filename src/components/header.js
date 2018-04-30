@@ -17,16 +17,17 @@ class Header extends Component {
               </button>
               <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
-                  <li className="nav-item active">
+                  <li className={ window.location.href.split('/').pop()==="cadastro" ? "nav-item active" : "nav-item"}>
+                  
                     <Link className="nav-link" to="/cadastro">Cadastrar <span className="sr-only">(current)</span></Link>
                   </li>
-                  <li className="nav-item">
+                  <li className={ window.location.href.split('/').pop()==="listar" ? "nav-item active" : "nav-item" }>
                     <Link className="nav-link" to="/listar">Listar</Link>
                   </li>
-                  <li className="nav-item">
+                  <li className={ window.location.href.split('/').pop()==="upload" ? "nav-item active" : "nav-item" }>
                   <Link className="nav-link" to="/upload">Upload</Link>
                 </li>
-                <li className="nav-item">
+                <li className={ window.location.href.split('/').pop()==="logout" ? "nav-item active" : "nav-item" }>
                   <Link className="nav-link" to="/logout" onClick={()=>this.logout()}>Logout</Link>
                 </li>
                 </ul>

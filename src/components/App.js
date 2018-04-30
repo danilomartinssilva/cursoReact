@@ -19,12 +19,11 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-    <div className="container">
+        <div className="container">
         <Switch>
           <Route path="/login" component={Login} exact={true} />     
           <Route path="/autenticado" component={Autenticado} exact={true} />  
-          <Redirect from="/logout"   to="/autenticado"/>
-          
+          <Redirect from="/logout"   to="/autenticado"/>          
           <Autenticado>               
           <Header/>  
             <Route path = "/cadastro" component={Cadastro}/>
