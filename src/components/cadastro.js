@@ -42,7 +42,6 @@ class Cadastro extends Component{
         
     }
     
-
     render(){
         return(                        
         <form>

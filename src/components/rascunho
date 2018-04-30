@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-body">
+    This is some text within a card body.
+  </div>
+</div>
+
+ return _.map(this.state.notes,(note,key)=>{
+            
+              return (
+                <div key = {key}>
+                    <div className="card" >
+                        <h5 className="card-header">{note.title}</h5>
+                        <div className="card-body">
+                            
+                            <p className="card-text">{note.body}</p>
+                            <button className="btn btn-danger" onClick={()=> this.deleteItem(key) }>Excluir</button>
+                        </div>                    
+                        
+                    </div>
+                    <br></br>
+                </div>
+                
+              )  
+        })
+
+
+        
+      <BrowserRouter>
+          <div>
+          <Header/>  
+            <div className="container">        
+            <Route path = "/cadastro" component={Cadastro}/>
+            <Route path = "/listar" component={Lista}/>          
+            </div>
+          </div>    
+      </BrowserRouter>
+      
+
+        this.isEmpty() && Object.keys(this.props.notes).map(
+               key=>this.renderNote(key,this.props.notes[key]))
