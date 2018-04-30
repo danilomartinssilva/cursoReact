@@ -27,9 +27,13 @@ class Header extends Component {
                   <li className={ window.location.href.split('/').pop()==="upload" ? "nav-item active" : "nav-item" }>
                   <Link className="nav-link" to="/upload">Upload</Link>
                 </li>
+                <li className={ window.location.href.split('/').pop()==="perfil" ? "nav-item active" : "nav-item" }>
+                  <Link className="nav-link" to="/perfil" >Perfil</Link>
+                </li>
                 <li className={ window.location.href.split('/').pop()==="logout" ? "nav-item active" : "nav-item" }>
                   <Link className="nav-link" to="/logout" onClick={()=>this.logout()}>Logout</Link>
                 </li>
+                
                 </ul>
               </div>
             </nav>

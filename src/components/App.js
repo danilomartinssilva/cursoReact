@@ -7,6 +7,7 @@ import Header from './header.js';
 import Upload from './upload.js';
 import Login from './login.js';
 import Autenticado from './autenticado';
+import Perfil from './perfil';
 
 
 
@@ -29,6 +30,9 @@ class App extends Component {
             <Route path = "/cadastro" component={Cadastro}/>
             <Route path = "/listar" component={Lista}/>  
             <Route path = "/upload" component={Upload}/>  
+            <Route path = "/perfil" component={Perfil}/>  
+            
+            
           </Autenticado>
         </Switch>
     </div>    
